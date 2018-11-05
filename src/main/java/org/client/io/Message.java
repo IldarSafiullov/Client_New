@@ -14,4 +14,5 @@ public class Message {
     private String from;
     private String to;
     private Map<String, Object> payload;
+
 }
