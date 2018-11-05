@@ -1,24 +1,20 @@
 package org.client;
 
-import java.io.BufferedReader;
+import org.client.io.UserInfo;
+import org.client.io.Reader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.InetAddress;
 import java.net.Socket;
-
-import static java.lang.System.in;
 
 
 public class Client {
 
-    public static String clientName;
-
     public static void main(String[] args) throws IOException {
         Socket socket = new Socket(InetAddress.getLocalHost(), 8888);
-        BufferedReader bf = new BufferedReader(new InputStreamReader(in));
-        System.out.println("Enter the name: ");
-        clientName = bf.readLine();
-        new Thread(new Reader(socket)).start();
+        UserInfo.getInstance().setSocket(socket);
 
+        new Thread(new Reader()).start();
+        new Thread(new Application()).start();
         }
     }

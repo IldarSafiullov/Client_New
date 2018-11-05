@@ -6,13 +6,12 @@ import java.net.Socket;
 
 
 public class Reader implements Runnable{
-    private final Socket socket;
 
-    public Reader(Socket socket) {
-        this.socket = socket;
+    public Reader() {
     }
 
     public String readMessage() throws IOException {
+        Socket socket = UserInfo.getInstance().getSocket();
         DataInputStream din = new DataInputStream(socket.getInputStream());
         return din.readUTF();
     }
