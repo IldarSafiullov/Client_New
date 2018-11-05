@@ -1,11 +1,11 @@
 package io;
 
-
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.Socket;
 
-public class Reader {
+
+public class Reader implements Runnable{
     private final Socket socket;
 
     public Reader(Socket socket) {
@@ -15,5 +15,15 @@ public class Reader {
     public String readMessage() throws IOException {
         DataInputStream din = new DataInputStream(socket.getInputStream());
         return din.readUTF();
+    }
+
+    public void run() {
+        while (true){
+            try {
+                System.out.println("Message from server: " + readMessage());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
