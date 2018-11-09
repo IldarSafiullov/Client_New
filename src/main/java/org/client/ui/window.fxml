@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.client.ui.Controller">
+   <children>
+      <AnchorPane layoutY="88.0" prefHeight="312.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <TextField fx:id="login_field" layoutX="225.0" layoutY="96.0" prefHeight="25.0" prefWidth="252.0" promptText="Логин" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="password_field" layoutX="224.0" layoutY="156.0" prefHeight="26.0" prefWidth="252.0" promptText="Пароль" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </PasswordField>
+            <Label layoutX="233.0" layoutY="14.0" text="Авторизация" textFill="#8d8a8a">
+               <font>
+                  <Font name="Comic Sans MS" size="38.0" />
+               </font>
+            </Label>
+            <Button fx:id="authSignInButton" layoutX="290.0" layoutY="222.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #F39C63;" text="Войти" textFill="WHITE">
+               <font>
+                  <Font name="Webdings" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="216.0" layoutY="14.0" text="Messanger" textFill="WHITE">
+         <font>
+            <Font name="Forte" size="56.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginSingUpButton" layoutX="525.0" layoutY="20.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="161.0" style="-fx-background-color: #F39C63;" text="Зарегистрироваться" textFill="WHITE">
+         <font>
+            <Font name="Webdings" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

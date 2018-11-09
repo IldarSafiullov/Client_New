@@ -14,15 +14,4 @@ public class User {
     private String name;
     private Socket socket;
 
-
-//    public void setName() {
-//        BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
-//        System.out.println("Enter the name: ");
-//        try {
-//            name = buf.readLine();
-//            new Writer(socket).writeMessage(name);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 }
